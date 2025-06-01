@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - testaction
-
+    inputs:
+      who-to-greet:
+        description: Who to greet in the log
+        required: true
+        default: 'World1'
+        type: string
+        
 jobs:
   say-hello:
     name: Say Hello
